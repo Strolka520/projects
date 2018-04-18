@@ -1,0 +1,71 @@
+{
+	"particles":{
+		"number":{
+			"value":150
+		},
+		"color":{
+			"value":"#fff"
+		},
+		"shape":{
+			"type":"circle",
+			"stroke":{
+				"width":1,
+				"color": "#ccc"
+			},
+			"image":{
+				"src":"http://icons.iconarchive.com/icons/custom-icon-design/silky-line-user/512/user-icon.png"
+			}
+		},
+		"opacity":{
+			"value":0.5,
+			"random":true,
+			"anim":{
+				"enable":true,
+				"speed":0.25
+			}
+		},
+		"size":{
+			"value": 5,
+			"random":true,
+			"anim":{
+				"enable": true,
+				"speed": 5
+			}
+		},
+		"line_linked":{
+			"enable": true,
+			"distance": 120,
+			"color": "#222",
+			"width": 2
+		},
+		"move":{
+			"enable":true,
+			"speed":2,
+			"direction":"none",
+			"straight":false
+		}
+	},
+	"interactivity":{
+		"events":{
+			"onhover":{
+				"enable":true,
+				"mode":"repulse"
+			},
+			"onclick":{
+				"enable":true,
+				"mode":"bubble"
+
+			}
+		},
+		"modes":{
+			"repulse":{
+				"distance":50,
+				"duration":0.4
+			},
+			"bubble":{
+				"distance":100,
+				"size":7
+			}
+		}
+	}
+}
