@@ -125,23 +125,133 @@ console.log(fullAge);
 ////////////////////////////////////////////
 // CODING CHALLENGE 1
 
-var height1 = 170;
-var height2 = 172;
-var height3 = 171;
-var age1 = 29;
-var age2 = 26;
-var age3 = 25;
+// var height1 = 170;
+// var height2 = 172;
+// var height3 = 171;
+// var age1 = 29;
+// var age2 = 26;
+// var age3 = 25;
 
-var score1 = height1 + 5 * age1;
-var score2 = height2 + 5 * age2;
-var score3 = height3 + 5 * age3;
+// var score1 = height1 + 5 * age1;
+// var score2 = height2 + 5 * age2;
+// var score3 = height3 + 5 * age3;
 
-if (score1 > score2 && score1 > score3){
-	console.log('P1 wins the game! Points are ' + score1);
-} else if (score2 > score1 && score2 > score3){
-	console.log('P2 wins the game! Points are ' + score2);
-} else if (score3 > score1 && score3 > score2){
-	console.log('P3 wins the game! Points are ' + score3);
-} else {
-	console.log('It\'s a draw. Points are all ' + score1);
+// if (score1 > score2 && score1 > score3){
+// 	console.log('P1 wins the game! Points are ' + score1);
+// } else if (score2 > score1 && score2 > score3){
+// 	console.log('P2 wins the game! Points are ' + score2);
+// } else if (score3 > score1 && score3 > score2){
+// 	console.log('P3 wins the game! Points are ' + score3);
+// } else {
+// 	console.log('It\'s a draw. Points are all ' + score1);
+// }
+
+// function calculateAge(yearOfBirth){
+// 	var age = 2016 - yearOfBirth
+// 	return age;
+// }
+
+// var ageJohn = calculateAge(1990);
+// var ageMike = calculateAge(1969);
+// var ageMary = calculateAge(1948);
+
+
+
+
+// function yearsUntilRetirement(name, yearOfBirth){
+// 	var age = calculateAge(yearOfBirth);
+// 	var retirement = 65 - age;
+// 	if (retirement >= 0){
+// 		console.log(name + ' retires in ' + retirement + ' years.');
+// 	}		else {
+// 		console.log(name + ' is retired!')
+// 	}
+// }
+
+// yearsUntilRetirement('John', 1990);
+// yearsUntilRetirement('Mike', 1969);
+// yearsUntilRetirement('Mary', 1948);
+
+
+
+//////////////////////////////////////////////
+// Lecture: Statements and expressions
+
+function someFun(par){
+	//code
 }
+
+var someFun = function(par){
+	//code
+}
+
+//Expressions
+3 + 4;
+var x = 3;
+
+//Statements
+if (x === 5) {
+	//do something
+}
+
+
+//////////////////////////////////////////
+// Lecture: Arrays
+
+// var names = ['John', 'Jane', 'Mark'];
+// var years = new Array(1990, 1969, 1948);
+
+// console.log(names);
+
+// console.log(names[2]);
+// names[1] = 'Ben';
+// console.log(names);
+
+// var john = ['John', 'Smith', 1990, 'cop', false]
+
+// john.push('blue');
+// john.unshift('Mr.');
+// john.pop();
+// john.shift();
+
+// console.log(john);
+
+// if (john.indexOf('teacher') === -1) {
+// 	console.log('John is not a teacher.');
+// }
+
+
+
+/////////////////////////////////////////
+// Lecture: Objects
+
+var john = {
+	name: 'John',
+	lastName: 'Smith',
+	yearOfBirth: 1990,
+	job: 'teacher',
+	isMarried: false
+};
+
+console.log(john.lastName);
+console.log(john['lastName']);
+
+var xyz = 'job';
+console.log(john[xyz]);
+
+john.lastName = 'Miller';
+john['job'] = 'programmer';
+
+console.log(john);
+
+
+
+
+var jane = new Object();
+jane.name = 'Jane';
+jane.lastName = 'Smith';
+jane['yearOfBirth'] = 1969;
+jane['job'] = 'retired';
+jane['isMarried'] = true;
+
+console.log(jane);
