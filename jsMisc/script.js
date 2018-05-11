@@ -177,22 +177,22 @@ console.log(fullAge);
 //////////////////////////////////////////////
 // Lecture: Statements and expressions
 
-function someFun(par){
-	//code
-}
+// function someFun(par){
+// 	//code
+// }
 
-var someFun = function(par){
-	//code
-}
+// var someFun = function(par){
+// 	//code
+// }
 
-//Expressions
-3 + 4;
-var x = 3;
+// //Expressions
+// 3 + 4;
+// var x = 3;
 
-//Statements
-if (x === 5) {
-	//do something
-}
+// //Statements
+// if (x === 5) {
+// 	//do something
+// }
 
 
 //////////////////////////////////////////
@@ -225,33 +225,183 @@ if (x === 5) {
 /////////////////////////////////////////
 // Lecture: Objects
 
+// var john = {
+// 	name: 'John',
+// 	lastName: 'Smith',
+// 	yearOfBirth: 1990,
+// 	job: 'teacher',
+// 	isMarried: false
+// };
+
+// console.log(john.lastName);
+// console.log(john['lastName']);
+
+// var xyz = 'job';
+// console.log(john[xyz]);
+
+// john.lastName = 'Miller';
+// john['job'] = 'programmer';
+
+// console.log(john);
+
+/////////////////////////////////////////
+// Lecture: Objects and methods
+
+
+
+//v1.0
+/*
 var john = {
 	name: 'John',
 	lastName: 'Smith',
 	yearOfBirth: 1990,
 	job: 'teacher',
-	isMarried: false
+	isMarried: false,
+	family: ['Jane', 'Mark', 'Bob'],
+	calculateAge: function(){
+		return 2016 - this.yearOfBirth;
+	}
 };
 
-console.log(john.lastName);
-console.log(john['lastName']);
 
-var xyz = 'job';
-console.log(john[xyz]);
+// console.log(john.calculateAge(1970)); 
+console.log(john.calculateAge());
 
-john.lastName = 'Miller';
-john['job'] = 'programmer';
+var age = john.calculateAge();
+john.age = age;
 
 console.log(john);
+*/
+
+// v2.0
+// var john = {
+// 	name: 'John',
+// 	lastName: 'Smith',
+// 	yearOfBirth: 1990,
+// 	job: 'teacher',
+// 	isMarried: false,
+// 	family: ['Jane', 'Mark', 'Bob'],
+// 	calculateAge: function(){
+// 		this.age = 2016 - this.yearOfBirth
+// 	}
+// };
+
+// john.calculateAge();
+// console.log(john);
+
+
+// var mike = {
+// 	yearOfBirth: 1950,
+// 	calculateAge: function(){
+// 		this.age = 2016 - this.yearOfBirth
+// 	}
+// };
+
+// mike.calculateAge();
+// console.log(mike);
+
+
+/////////////////////////////////////
+// My own objects
+
+// var loan = {
+// 	creditor: 'Copper Stone Financial',
+// 	begBal: 4000,
+// 	curBal: 3200,
+// 	term: 36,
+// 	frequency: 'monthly',
+// 	payment: 125,
+// 	rate: function(){
+// 		//calculate function
+// 	},
+// 	paybackAmt: function(){
+// 		this.intAmt = (this.term * this.payment) - this.begBal
+// 	}
+// };
+
+// loan.paybackAmt();
+// console.log(loan);
 
 
 
+////////////////////////////////////////////////////////
+// Lecture: Loops
 
-var jane = new Object();
-jane.name = 'Jane';
-jane.lastName = 'Smith';
-jane['yearOfBirth'] = 1969;
-jane['job'] = 'retired';
-jane['isMarried'] = true;
+// for (i = 0; i < 10; i++){
+// 	console.log(i);
+// }
 
-console.log(jane);
+// var names = ['John', 'Jane', 'Mary', 'Mark', 'Bob'];
+
+/*
+//for loops
+for (var i = 0; i < names.length; i++){
+	console.log(names[i]);
+}
+
+for (var i = names.length - 1; i >= 0; i--){
+	console.log(names[i]);
+}
+*/
+
+// while loops
+// var i = 0;
+// while(i < names.length){
+// 	console.log(names[i]);
+// 	i++;
+// }
+
+// for (var i = 1; i < 6; i++){
+// 	console.log(i);
+
+// 	if (i === 3){
+// 		break;
+// 	}
+// }
+
+// for (var i = 1; i < 6; i++){
+// 	if (i === 3){
+// 		continue;
+// 	}
+// 	console.log(i);
+// }
+
+
+
+///////////////////////////////////////////////////////
+// CODING CHALLENGE 2
+
+var years = [1991, 1994, 1988, 1989, 1961, 1966];
+var age = [];
+
+for (var i = 0; i < years.length; i++){
+	age.push(2018 - years[i]);
+}
+
+for (var i = 0; i < age.length; i++){
+	if (age[i] >= 18){
+		console.log(age);
+	}
+}
+
+function printFullAge(years){
+	var age = [];
+	var arr = [];
+
+	for (var i = 0; i < years.length; i++){
+		age.push(2018 - years[i]);
+	}
+
+	for (var i = 0; i < age.length; i++){
+		if (age[i] >= 18){
+			console.log(age);
+			arr.push(true);
+		} else{
+			arr.push(false);
+		}
+	}
+	console.log(arr);
+}
+
+var full_1 = printFullAge([2012, 1990, 2011])
+var full_2 = printFullAge([1965, 2008, 1992])
