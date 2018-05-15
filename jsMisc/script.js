@@ -371,37 +371,112 @@ for (var i = names.length - 1; i >= 0; i--){
 ///////////////////////////////////////////////////////
 // CODING CHALLENGE 2
 
-var years = [1991, 1994, 1988, 1989, 1961, 1966];
-var age = [];
+// var years = [1991, 1994, 1988, 1989, 1961, 1966];
+// var age = [];
 
-for (var i = 0; i < years.length; i++){
-	age.push(2018 - years[i]);
-}
+// for (var i = 0; i < years.length; i++){
+// 	age.push(2018 - years[i]);
+// }
 
-for (var i = 0; i < age.length; i++){
-	if (age[i] >= 18){
-		console.log(age);
+// for (var i = 0; i < age.length; i++){
+// 	if (age[i] >= 18){
+// 		console.log(age);
+// 	}
+// }
+
+// function printFullAge(years){
+// 	var age = [];
+// 	var arr = [];
+
+// 	for (var i = 0; i < years.length; i++){
+// 		age.push(2018 - years[i]);
+// 	}
+
+// 	for (var i = 0; i < age.length; i++){
+// 		if (age[i] >= 18){
+// 			console.log(age);
+// 			arr.push(true);
+// 		} else{
+// 			arr.push(false);
+// 		}
+// 	}
+// 	console.log(arr);
+// }
+
+// var full_1 = printFullAge([2012, 1990, 2011])
+// var full_2 = printFullAge([1965, 2008, 1992])
+
+
+
+//////////////////////////////////////////////
+// Lecture: Hoisting
+
+// functions
+// calculateAge(1965);
+
+// function calculateAge(year){
+// 	console.log(2016 - year);
+// }
+
+//retirement(1965);
+
+// var retirement = function(year){
+// 	console.log(65 - (2016 - year));
+// }
+
+
+
+// variables
+// console.log(age);
+// var age = 23;
+
+// function foo(){
+// 	console.log(age);
+// 	var age = 65;
+// 	console.log(age);
+// }
+// foo();
+// console.log(age);
+
+
+
+
+
+//////////////////////////////////////////////
+//
+// Lecture: Scoping
+
+// First scoping exampe
+// var a = 'Hello!';
+// first();
+
+// function first (){
+// 	var b = 'Hi!';
+// 	second();
+
+// 	function second(){
+// 		var c = 'Hey!';
+// 		console.log(a + b + c);
+// 	}
+// }
+
+//Example to show the difference
+//between execturion stack and scope 
+//chain
+
+var a = 'Hello!';
+first();
+
+function first (){
+	var b = 'Hi!';
+	second();
+
+	function second(){
+		var c = 'Hey!';
 	}
 }
 
-function printFullAge(years){
-	var age = [];
-	var arr = [];
-
-	for (var i = 0; i < years.length; i++){
-		age.push(2018 - years[i]);
-	}
-
-	for (var i = 0; i < age.length; i++){
-		if (age[i] >= 18){
-			console.log(age);
-			arr.push(true);
-		} else{
-			arr.push(false);
-		}
-	}
-	console.log(arr);
+function third(){
+	var d = 'John';
+	console.log(a + d);
 }
-
-var full_1 = printFullAge([2012, 1990, 2011])
-var full_2 = printFullAge([1965, 2008, 1992])
