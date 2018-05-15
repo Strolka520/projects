@@ -464,19 +464,58 @@ for (var i = names.length - 1; i >= 0; i--){
 //between execturion stack and scope 
 //chain
 
-var a = 'Hello!';
-first();
+// var a = 'Hello!';
+// first();
 
-function first (){
-	var b = 'Hi!';
-	second();
+// function first (){
+// 	var b = 'Hi!';
+// 	second();
 
-	function second(){
-		var c = 'Hey!';
+// 	function second(){
+// 		var c = 'Hey!';
+// 	}
+// }
+
+// function third(){
+// 	var d = 'John';
+// 	console.log(a + d);
+// }
+
+///////////////////////////////////////////
+// Lecture: The this keyword
+
+//console.log(this);
+
+/*
+calculateAge(1985);
+function calculateAge(year){
+	console.log(2016 - year);
+	console.log(this);
+}
+*/
+
+var john = {
+	name: 'John',
+	yearOfBirth: 1990,
+	calculateAge: function(){
+		console.log(this);
+		console.log(2016 - this.yearOfBirth);
+
+		/*
+		function innerFunction(){
+			console.log(this);
+		}
+		innerFunction();
+		*/
 	}
 }
 
-function third(){
-	var d = 'John';
-	console.log(a + d);
-}
+john.calculateAge();
+
+var mike = {
+	name: 'Mike',
+	yearOfBirth: 1984
+};
+
+mike.calculateAge = john.calculateAge;
+mike.calculateAge();
