@@ -16,11 +16,11 @@
 }
 
 body {
-    background-image: linear-gradient(rgba(62, 20, 20, 0.4), rgba(62, 20, 20, 0.4)), url(back.jpg);
+    background-image: linear-gradient(rgba(62, 20, 20, 0.4), rgba(62, 20, 20, 0.4)), url(background.jpg);
     background-size: cover;
     background-position: center;
-    font-family: Lato;
-    font-weight: 300;
+    font-family: Titillium Web;
+    font-weight: 400;
     position: relative;
     height: 100vh;
     color: #555;
@@ -56,7 +56,7 @@ body {
     text-align: center;
     text-transform: uppercase;
     letter-spacing: 2px;
-    font-weight: 100;
+    font-weight: 300;
     margin-top: 20px;
     margin-bottom: 10px;
     position: relative;
@@ -65,26 +65,26 @@ body {
 .player-score {
     text-align: center;
     font-size: 80px;
-    font-weight: 100;
-    color: #EB4D4D;
+    font-weight: 300;
+    color: #647bef;
     margin-bottom: 130px;
 }
 
 .active { background-color: #f7f7f7; }
-.active .player-name { font-weight: 300; }
+.active .player-name { font-weight: 400; }
 
 .active .player-name::after {
     content: "\2022";
     font-size: 47px;
     position: absolute;
-    color: #EB4D4D;
+    color: #647bef;
     top: -7px;
     right: 10px;
     
 }
 
 .player-current-box {
-    background-color: #EB4D4D;
+    background-color: #647bef;
     color: #fff;
     width: 40%;
     margin: 0 auto;
@@ -111,11 +111,11 @@ button {
     color: #555;
     background: none;
     border: none;
-    font-family: Lato;
+    font-family: Titillium Web;
     font-size: 20px;
     text-transform: uppercase;
     cursor: pointer;
-    font-weight: 300;
+    font-weight: 400;
     transition: background-color 0.3s, color 0.3s;
 }
 
@@ -127,7 +127,7 @@ button:focus {
 }
 
 i {
-    color: #EB4D4D;
+    color: #647bef;
     display: inline-block;
     margin-right: 15px;
     font-size: 32px;
@@ -151,4 +151,4 @@ i {
 }
 
 .winner { background-color: #f7f7f7; }
-.winner .player-name { font-weight: 300; color: #EB4D4D; }
+.winner .player-name { font-weight: 400; color: #647bef; }
